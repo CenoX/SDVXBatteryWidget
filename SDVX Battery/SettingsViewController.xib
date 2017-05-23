@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SettingsViewController" customModule="SDVX_Battery" customModuleProvider="target">
+            <connections>
+                <outlet property="excessive" destination="f4e-gN-B0I" id="rtD-qK-9VV"/>
+                <outlet property="infinite" destination="mJy-C9-wYu" id="KkM-2T-ybE"/>
+                <outlet property="normal" destination="hsV-BS-8cC" id="j5c-7X-KMC"/>
+                <outlet property="permissive" destination="ed8-7W-sdP" id="EKD-fG-jiH"/>
+                <outlet property="scale1" destination="5Im-jk-5XB" id="Qad-la-lCy"/>
+                <outlet property="scale2" destination="U4F-Gr-4TA" id="Orh-uw-bGn"/>
+                <outlet property="scale3" destination="Aaj-t1-vvx" id="HMt-j1-gmO"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="481"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b45-Az-Tf5">
+                    <rect key="frame" x="18" y="437" width="380" height="24"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="SDVX Battery Widget" id="jqA-LB-cWN">
+                        <font key="font" size="20" name=".AppleSystemUIFontUltraLight"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSB-dL-x5U">
+                    <rect key="frame" x="18" y="413" width="380" height="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Gauge Style" id="Oqz-7s-Owv">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybk-zE-ZoF">
+                    <rect key="frame" x="20" y="226" width="88" height="172"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="gauge_normal" id="hHC-Ez-Nm0"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EsW-Zq-qxb">
+                    <rect key="frame" x="212" y="226" width="88" height="172"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="gauge_excessive" id="AWE-PQ-J4Y"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S7c-XD-Jba">
+                    <rect key="frame" x="308" y="226" width="88" height="172"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="gauge_infinite" id="GGE-4C-ev8"/>
+                </imageView>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-Dk-sga">
+                    <rect key="frame" x="116" y="226" width="88" height="172"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="gauge_permissive" id="lyM-rH-Rff"/>
+                </imageView>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdj-Z2-Lf2">
+                    <rect key="frame" x="356" y="18" width="40" height="25"/>
+                    <buttonCell key="cell" type="roundTextured" title="Quit" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sG9-3L-aMA">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <string key="keyEquivalent">q</string>
+                    </buttonCell>
+                    <connections>
+                        <action selector="quit:" target="-2" id="FIh-OD-sPx"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VkM-Gb-Bma">
+                    <rect key="frame" x="20" y="18" width="51" height="25"/>
+                    <buttonCell key="cell" type="roundTextured" title="About" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FXL-UP-RWl">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="about:" target="-2" id="7fc-K2-5Dv"/>
+                    </connections>
+                </button>
+                <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="h5J-dy-g0j">
+                    <rect key="frame" x="20" y="404" width="376" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="Zej-z8-cZ8">
+                    <rect key="frame" x="20" y="164" width="376" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mdx-st-41C">
+                    <rect key="frame" x="18" y="175" width="380" height="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="App Scale" id="fUg-Ve-3Wx">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" fixedFrame="YES" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="pAZ-sz-xsw">
+                    <rect key="frame" x="20" y="107" width="376" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lv4-WU-Yb6">
+                    <rect key="frame" x="18" y="118" width="380" height="16"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="DISCLAIMER" id="wPP-36-NG0">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hsV-BS-8cC">
+                    <rect key="frame" x="19" y="198" width="91" height="21"/>
+                    <buttonCell key="cell" type="radio" title="Normal" bezelStyle="regularSquare" imagePosition="left" alignment="center" state="on" inset="2" id="IYb-ci-dTp">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="systemLight" size="13"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="updateValue:" target="-2" id="Oty-Ed-wU1"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="ed8-7W-sdP">
+                    <rect key="frame" x="114" y="198" width="92" height="21"/>
+                    <buttonCell key="cell" type="radio" title="Permissive" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="KEc-rf-zkR">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="systemLight" size="13"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="updateValue:" target="-2" id="Lx4-Vm-hee"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-gN-B0I">
+                    <rect key="frame" x="211" y="198" width="91" height="21"/>
+                    <buttonCell key="cell" type="radio" title="Excessive" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="azw-xS-GPp">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="systemLight" size="13"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="updateValue:" target="-2" id="6qJ-xB-3dK"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="mJy-C9-wYu">
+                    <rect key="frame" x="307" y="198" width="91" height="21"/>
+                    <buttonCell key="cell" type="radio" title="Infinite" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="TtA-7U-ZsE">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="systemLight" size="13"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="updateValue:" target="-2" id="6v3-BX-4Cw"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Im-jk-5XB">
+                    <rect key="frame" x="19" y="141" width="123" height="18"/>
+                    <buttonCell key="cell" type="radio" title="1" bezelStyle="regularSquare" imagePosition="left" alignment="center" state="on" inset="2" id="Iym-Sh-WGo">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="updateScaleValue:" target="-2" id="mo4-K0-Eup"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h6W-xX-9Gp">
+                    <rect key="frame" x="18" y="50" width="380" height="51"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="gTN-Mn-yVs">
+                        <font key="font" metaFont="miniSystem"/>
+                        <string key="title">Copyright 2016 shiftstudios. All rights reserved.
+"SDVX", "Sound Voltex", "Sound Voltex III GRAVITY WARS" are trademarks of Konami Digital Entertainment.
+shiftstudios is not affiliated with Konami Digital Entertainment in any ways.</string>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="U4F-Gr-4TA">
+                    <rect key="frame" x="147" y="141" width="123" height="18"/>
+                    <buttonCell key="cell" type="radio" title="1/2" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="A4C-26-f2H">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="updateScaleValue:" target="-2" id="jaS-fD-qpW"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="Aaj-t1-vvx">
+                    <rect key="frame" x="275" y="141" width="123" height="18"/>
+                    <buttonCell key="cell" type="radio" title="1/4" bezelStyle="regularSquare" imagePosition="left" alignment="center" inset="2" id="jfD-Vv-N9E">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="updateScaleValue:" target="-2" id="G6Q-6x-OWl"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1U-zZ-wpU">
+                    <rect key="frame" x="150" y="13" width="116" height="32"/>
+                    <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zAT-GJ-qr7">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="saveData:" target="-2" id="uyE-5C-D83"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="308" y="375.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="gauge_excessive" width="255" height="924"/>
+        <image name="gauge_infinite" width="255" height="924"/>
+        <image name="gauge_normal" width="255" height="884"/>
+        <image name="gauge_permissive" width="255" height="924"/>
+    </resources>
+</document>

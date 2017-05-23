@@ -7,17 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C043F5BD1CE47CA400C31557 /* relaunch in Resources */ = {isa = PBXBuildFile; fileRef = C043F5BA1CE47C8200C31557 /* relaunch */; };
 		C06CF7FC1CDF8DC6003D82B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06CF7FB1CDF8DC6003D82B0 /* AppDelegate.swift */; };
 		C06CF7FE1CDF8DC6003D82B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06CF7FD1CDF8DC6003D82B0 /* Assets.xcassets */; };
 		C06CF8011CDF8DC6003D82B0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06CF7FF1CDF8DC6003D82B0 /* MainMenu.xib */; };
+		C06CF80A1CDF9571003D82B0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06CF8081CDF9571003D82B0 /* SettingsViewController.swift */; };
+		C06CF80B1CDF9571003D82B0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06CF8091CDF9571003D82B0 /* SettingsViewController.xib */; };
+		C06CF80D1CE0AC98003D82B0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06CF80C1CE0AC98003D82B0 /* IOKit.framework */; };
+		C06CF8131CE0B45F003D82B0 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = C06CF8121CE0B45F003D82B0 /* Settings.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C043F5B91CE47C8200C31557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C043F5B51CE47C8100C31557 /* relaunch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C043F5AB1CE47C8100C31557;
+			remoteInfo = relaunch;
+		};
+		C043F5BB1CE47CA100C31557 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C043F5B51CE47C8100C31557 /* relaunch.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C043F5AA1CE47C8100C31557;
+			remoteInfo = relaunch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C043F5B51CE47C8100C31557 /* relaunch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = relaunch.xcodeproj; path = relaunch/relaunch.xcodeproj; sourceTree = "<group>"; };
 		C06CF7F81CDF8DC6003D82B0 /* SDVX Battery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDVX Battery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06CF7FB1CDF8DC6003D82B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06CF7FD1CDF8DC6003D82B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C06CF8001CDF8DC6003D82B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C06CF8021CDF8DC6003D82B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C06CF8081CDF9571003D82B0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C06CF8091CDF9571003D82B0 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		C06CF80C1CE0AC98003D82B0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		C06CF8121CE0B45F003D82B0 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,15 +52,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06CF80D1CE0AC98003D82B0 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C043F5B61CE47C8100C31557 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C043F5BA1CE47C8200C31557 /* relaunch */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C06CF7EF1CDF8DC6003D82B0 = {
 			isa = PBXGroup;
 			children = (
+				C043F5B51CE47C8100C31557 /* relaunch.xcodeproj */,
+				C06CF80C1CE0AC98003D82B0 /* IOKit.framework */,
 				C06CF7FA1CDF8DC6003D82B0 /* SDVX Battery */,
 				C06CF7F91CDF8DC6003D82B0 /* Products */,
 			);
@@ -51,6 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				C06CF7FB1CDF8DC6003D82B0 /* AppDelegate.swift */,
+				C06CF8081CDF9571003D82B0 /* SettingsViewController.swift */,
+				C06CF8121CE0B45F003D82B0 /* Settings.plist */,
+				C06CF8091CDF9571003D82B0 /* SettingsViewController.xib */,
 				C06CF7FD1CDF8DC6003D82B0 /* Assets.xcassets */,
 				C06CF7FF1CDF8DC6003D82B0 /* MainMenu.xib */,
 				C06CF8021CDF8DC6003D82B0 /* Info.plist */,
@@ -72,6 +113,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C043F5BC1CE47CA100C31557 /* PBXTargetDependency */,
 			);
 			name = "SDVX Battery";
 			productName = "SDVX Battery";
@@ -90,6 +132,8 @@
 				TargetAttributes = {
 					C06CF7F71CDF8DC6003D82B0 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UP6EXS2HJJ;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -104,6 +148,12 @@
 			mainGroup = C06CF7EF1CDF8DC6003D82B0;
 			productRefGroup = C06CF7F91CDF8DC6003D82B0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C043F5B61CE47C8100C31557 /* Products */;
+					ProjectRef = C043F5B51CE47C8100C31557 /* relaunch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C06CF7F71CDF8DC6003D82B0 /* SDVX Battery */,
@@ -111,12 +161,25 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		C043F5BA1CE47C8200C31557 /* relaunch */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = relaunch;
+			remoteRef = C043F5B91CE47C8200C31557 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		C06CF7F61CDF8DC6003D82B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C06CF7FE1CDF8DC6003D82B0 /* Assets.xcassets in Resources */,
+				C06CF8131CE0B45F003D82B0 /* Settings.plist in Resources */,
+				C06CF80B1CDF9571003D82B0 /* SettingsViewController.xib in Resources */,
+				C043F5BD1CE47CA400C31557 /* relaunch in Resources */,
 				C06CF8011CDF8DC6003D82B0 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,10 +192,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06CF7FC1CDF8DC6003D82B0 /* AppDelegate.swift in Sources */,
+				C06CF80A1CDF9571003D82B0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C043F5BC1CE47CA100C31557 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = relaunch;
+			targetProxy = C043F5BB1CE47CA100C31557 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C06CF7FF1CDF8DC6003D82B0 /* MainMenu.xib */ = {
@@ -183,7 +255,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -222,7 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -232,11 +304,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "SDVX Battery/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.shiftstudios.SDVX-Battery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -244,11 +322,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "SDVX Battery/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "net.shiftstudios.SDVX-Battery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -271,6 +354,7 @@
 				C06CF8071CDF8DC6003D82B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
