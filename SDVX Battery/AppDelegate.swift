@@ -20,7 +20,7 @@ extension NSImage {
         let img = NSImage(size: CGSize(width: width, height: height))
         
         img.lockFocus()
-        let ctx = NSGraphicsContext.current()
+        let ctx = NSGraphicsContext.current
         ctx?.imageInterpolation = .high
         self.draw(in: NSMakeRect(0, 0, width, height), from: NSMakeRect(0, 0, size.width, size.height), operation: .copy, fraction: 1)
         img.unlockFocus()
@@ -54,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var cachedBatteryLevel: Int = 0
     var lock: Int = 0
     
-    let statusItem = NSStatusBar.system().statusItem(withLength: -2)
+    let statusItem = NSStatusBar.system.statusItem(withLength: -2)
     let popover = NSPopover()
     var eventMonitor: EventMonitor?
     var currentScale: Int = 0
@@ -89,7 +89,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Set Window
         self.window.backgroundColor = .clear
         self.window.isOpaque = false
-        self.window.level = Int(kCGDesktopWindowLevel)
+        self.window.level = NSWindow.Level(rawValue: Int(kCGDesktopWindowLevel))
         self.window.orderBack(self)
         DispatchQueue.main.async(execute: {
             var timer = Timer()
@@ -121,7 +121,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
     
-    func togglePopover(_ sender: AnyObject?) {
+    @objc func togglePopover(_ sender: AnyObject?) {
         if popover.isShown {
             closePopover(sender)
         } else {
@@ -149,7 +149,7 @@ extension AppDelegate {
             if scale != 1 {
                 rect = CGRect(x: 0, y: 157, width: self.window.frame.width / CGFloat(scale), height: self.window.frame.height / CGFloat(scale))
             } else {
-                rect = CGRect(x: 0, y: 0, width: self.window.frame.width / CGFloat(scale), height: self.window.frame.height / CGFloat(scale))
+                rect = CGRect(x: 0, y: 150, width: self.window.frame.width / CGFloat(scale), height: self.window.frame.height / CGFloat(scale))
             }
             
             self.window.setFrame(rect, display: true, animate: true)
@@ -162,7 +162,7 @@ extension AppDelegate {
         })
     }
 
-    func getCurrentBatteryTheme() {
+    @objc func getCurrentBatteryTheme() {
         guard let fm = SDVXFileManager.getApplicationDirectory() else { fatalError("FUCKING NIL") }
         let path = fm.appendingPathComponent("Settings.plist")
         
@@ -301,7 +301,7 @@ extension AppDelegate {
         animation.fromValue = NSValue(point: currentPosition)
         animation.toValue = NSValue(point: CGPoint(x: currentPosition.x, y: heightPosition))
         animation.isRemovedOnCompletion = false
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = .forwards
         self.firstNum.layer?.add(animation, forKey: "transform")
         self.secondNum.layer?.add(animation, forKey: "transform")
         self.thirdNum.layer?.add(animation, forKey: "transform")
@@ -317,7 +317,7 @@ extension AppDelegate {
         
         for ps in sources {
             // Fetch the information for a given power source out of our snapshot
-            guard let info: NSDictionary = IOPSGetPowerSourceDescription(IOPSCopyPowerSourcesInfo().takeRetainedValue(), ps as CFTypeRef!)?.takeUnretainedValue()
+            guard let info: NSDictionary = IOPSGetPowerSourceDescription(IOPSCopyPowerSourcesInfo().takeRetainedValue(), ps as CFTypeRef?)?.takeUnretainedValue()
                 else { return nil }
             
             // Pull out the name and current capacity
@@ -382,11 +382,11 @@ open class SDVXFileManager {
 /* EVENTMONITOR */
 open class EventMonitor {
     fileprivate var monitor: AnyObject?
-    fileprivate let mask: NSEventMask
+    fileprivate let mask: NSEvent.EventTypeMask
     fileprivate let handler: (NSEvent?) -> ()
     
     
-    public init(mask: NSEventMask, handler: @escaping (NSEvent?) -> ()) {
+    public init(mask: NSEvent.EventTypeMask, handler: @escaping (NSEvent?) -> ()) {
         self.mask = mask
         self.handler = handler
     }

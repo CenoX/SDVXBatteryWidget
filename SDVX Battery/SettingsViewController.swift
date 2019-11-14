@@ -43,7 +43,7 @@ extension SettingsViewController {
         if theme == nil {
             fatalError("THEME FUCKING NIL")
         }
-        print("\(theme)")
+        print(theme as Any)
         
         let themeSeg = theme?.object(forKey: "Theme") as? String
         let scaleSeg = theme?.object(forKey: "Scale") as? String
@@ -51,16 +51,16 @@ extension SettingsViewController {
         if let themeIndex = Int(themeSeg!) {
             switch themeIndex {
             case 0:
-                self.normal.state = 1
+                self.normal.state = NSControl.StateValue(rawValue: 1)
                 break;
             case 1:
-                self.permissive.state = 1
+                self.permissive.state = NSControl.StateValue(rawValue: 1)
                 break;
             case 2:
-                self.excessive.state = 1
+                self.excessive.state = NSControl.StateValue(rawValue: 1)
                 break;
             case 3:
-                self.infinite.state = 1
+                self.infinite.state = NSControl.StateValue(rawValue: 1)
                 break;
             default:
                 break;
@@ -70,13 +70,13 @@ extension SettingsViewController {
         if let scaleIndex = Int(scaleSeg!) {
             switch scaleIndex {
             case 0:
-                self.scale1.state = 1
+                self.scale1.state = NSControl.StateValue(rawValue: 1)
                 break;
             case 1:
-                self.scale2.state = 1
+                self.scale2.state = NSControl.StateValue(rawValue: 1)
                 break;
             case 2:
-                self.scale3.state = 1
+                self.scale3.state = NSControl.StateValue(rawValue: 1)
                 break;
             default:
                 break;
@@ -112,10 +112,10 @@ extension SettingsViewController {
         a.informativeText = "Your settings will be affect next launch.\nDo you want restart app now?"
         a.addButton(withTitle: "Apply")
         a.addButton(withTitle: "Cancel")
-        a.alertStyle = NSAlertStyle.warning
+        a.alertStyle = .warning
         
         a.beginSheetModal(for: self.view.window!, completionHandler: { (modalResponse) -> Void in
-            if modalResponse == NSAlertFirstButtonReturn {
+            if modalResponse == NSApplication.ModalResponse.alertFirstButtonReturn {
                 guard let fm = SDVXFileManager.getApplicationDirectory() else { fatalError("FUCKING NIL") }
                 let path = fm.appendingPathComponent("Settings.plist")
                 
@@ -124,7 +124,7 @@ extension SettingsViewController {
                 theme?.setObject("\(self.scaleValue)", forKey: "Scale" as NSCopying)
                 theme?.write(to: path, atomically: true)
                 
-                NSApplication.shared().relaunch(sender)
+                NSApplication.shared.relaunch(sender)
             }
         })
     }
@@ -135,7 +135,7 @@ extension SettingsViewController {
     }
     
     @IBAction func quit(_ sender: AnyObject) {
-        NSApplication.shared().terminate(sender)
+        NSApplication.shared.terminate(sender)
     }
     
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C043F5BD1CE47CA400C31557 /* relaunch in Resources */ = {isa = PBXBuildFile; fileRef = C043F5BA1CE47C8200C31557 /* relaunch */; };
+		C05EF9BC237DDB2500F1484C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C05EF9BB237DDB2500F1484C /* .gitignore */; };
 		C06CF7FC1CDF8DC6003D82B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06CF7FB1CDF8DC6003D82B0 /* AppDelegate.swift */; };
 		C06CF7FE1CDF8DC6003D82B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06CF7FD1CDF8DC6003D82B0 /* Assets.xcassets */; };
 		C06CF8011CDF8DC6003D82B0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C06CF7FF1CDF8DC6003D82B0 /* MainMenu.xib */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		C043F5B51CE47C8100C31557 /* relaunch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = relaunch.xcodeproj; path = relaunch/relaunch.xcodeproj; sourceTree = "<group>"; };
+		C05EF9BB237DDB2500F1484C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C06CF7F81CDF8DC6003D82B0 /* SDVX Battery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SDVX Battery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06CF7FB1CDF8DC6003D82B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C06CF7FD1CDF8DC6003D82B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		C06CF7EF1CDF8DC6003D82B0 = {
 			isa = PBXGroup;
 			children = (
+				C05EF9BB237DDB2500F1484C /* .gitignore */,
 				C043F5B51CE47C8100C31557 /* relaunch.xcodeproj */,
 				C06CF80C1CE0AC98003D82B0 /* IOKit.framework */,
 				C06CF7FA1CDF8DC6003D82B0 /* SDVX Battery */,
@@ -142,6 +145,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -180,6 +184,7 @@
 				C06CF8131CE0B45F003D82B0 /* Settings.plist in Resources */,
 				C06CF80B1CDF9571003D82B0 /* SettingsViewController.xib in Resources */,
 				C043F5BD1CE47CA400C31557 /* relaunch in Resources */,
+				C05EF9BC237DDB2500F1484C /* .gitignore in Resources */,
 				C06CF8011CDF8DC6003D82B0 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +319,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -331,7 +336,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.shiftstudios.SDVX-Battery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

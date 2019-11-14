@@ -60,7 +60,7 @@ autoreleasepool {
         // relaunch
         print("Relaunching")
         do {
-            try NSWorkspace.shared().launchApplication(at: bundleURL, options: .newInstance, configuration: [:])
+            try NSWorkspace.shared.launchApplication(at: bundleURL, options: .newInstance, configuration: [:])
         } catch let error as NSError {
             print(error.localizedDescription)
         }
